@@ -196,7 +196,7 @@ export default {
   margin-left: 5px;
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 480px) {
   .block {
     padding: 25px 20px;
   }
