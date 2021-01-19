@@ -1,0 +1,29 @@
+@font-face {
+    src: url("../fonts/e-Ukraine-Bold.otf");
+    font-family: eBold;
+}
+
+@font-face {
+    src: url("../fonts/e-Ukraine-Light.otf");
+    font-family: eLight;
+}
+
+@font-face {
+    src: url("../fonts/e-Ukraine-Medium.otf");
+    font-family: eMedium;
+}
+
+@font-face {
+    src: url("../fonts/e-Ukraine-Regular.otf");
+    font-family: eRegular;
+}
+
+@font-face {
+    src: url("../fonts/e-Ukraine-Thin.otf");
+    font-family: eThin;
+}
+
+@font-face {
+    src: url("../fonts/e-Ukraine-UltraLight.otf");
+    font-family: eUltraLight;
+}
