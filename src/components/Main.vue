@@ -202,12 +202,13 @@ export default {
   }
 
   .main__title {
-    font-size: 3.2vw;
+    font-size: 3.1vw;
     padding-bottom: 25px;
   }
 
   .main__info {
     font-size: 4vw;
+    margin-bottom: 15px;
   }
 
   .main__right--number {
@@ -219,11 +220,11 @@ export default {
   }
 
   .main__right--signature img {
-    max-width: 50px;
+    max-width: 75px;
   }
 
   .main__fio {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 }
 
