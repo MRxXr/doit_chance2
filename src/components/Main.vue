@@ -82,6 +82,10 @@ export default {
 
 <style scoped>
 
+.main__back {
+  transform: translateY(-30px);
+}
+
 .front,
 .back {
   transition: .35s;
