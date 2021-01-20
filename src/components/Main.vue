@@ -94,7 +94,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -435px;
+  margin-top: -379px;
   justify-content: center;
 }
 
@@ -102,7 +102,7 @@ export default {
   text-transform: uppercase;
   color: #6b767f;
   font-family: eLight;
-  font-size: 14px;
+  font-size: 12px;
   padding-bottom: 24px;
   align-self: flex-start;
 }
@@ -113,15 +113,15 @@ export default {
 
 .back__qr img,
 .back__qrline img {
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
 }
 
 .back__text {
   text-align: center;
   font-family: eRegular;
-  letter-spacing: 7.2px;
-  font-size: 16px;
+  letter-spacing: 6.2px;
+  font-size: 14px;
 }
 
 .back__qrline {
@@ -219,8 +219,8 @@ export default {
 }
 
 .main__name--circle span {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background-color: #000;
   border-radius: 50%;
 }
@@ -228,8 +228,8 @@ export default {
 .main__name--circle span::after {
   content: ' ';
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background-color: #000;
   border-radius: 50%;
   transform: translateX(-7px);
@@ -238,8 +238,8 @@ export default {
 .main__name--circle span::before {
   content: ' ';
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background-color: #000;
   border-radius: 50%;
   transform: translateX(7px);
