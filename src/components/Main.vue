@@ -1,37 +1,57 @@
 <template>
   <div class="flex">
-    <div class="block">
-      <div class="main__title">
-        <h1>Паспорт громадянина <br> України</h1>
+    <div @click="isCardFlipped = true" class="block">
+      <div :class="isCardFlipped ? '-front' : ''" class="front">
+        <div class="main__title">
+          <h1>Паспорт громадянина <br> України</h1>
+        </div>
+        <div class="main__info">
+          <div class="main__info--left side">
+            <img src="../img/photo.png">
+          </div>
+          <div class="main__info--right side">
+            <div class="main__right--date">
+              <p>Дата <br> народження: <br> 14.07.2002</p>
+            </div>
+            <div class="main__right--number">
+              Номер: <br> 001738565
+            </div>
+            <div class="main__right--signature">
+              <img src="../img/signature.png">
+            </div>
+          </div>
+        </div>
+        <div class="main__fio">
+          <div class="main__name--title">
+            <p>Перекупко <br> Артем <br> Юрійович</p>
+          </div>
+          <div class="main__name--circle">
+            <span></span>
+          </div>
+        </div>
       </div>
-      <div class="main__info">
-        <div class="main__info--left side">
-          <img src="../img/photo.png">
-        </div>
-        <div class="main__info--right side">
-          <div class="main__right--date">
-            <p>Дата <br> народження: <br> 14.07.2002</p>
+      <div :class="isCardFlipped ? '-back' : ''" class="back">
+        <div class="main__back">
+          <div class="back__title">
+            <p>Коди діятимуть 3 хв</p>
           </div>
-          <div class="main__right--number">
-            Номер: <br> 001738565
+          <div class="back__qr">
+            <img src="../img/qrcode.png">
           </div>
-          <div class="main__right--signature">
-            <img src="../img/signature.png">
+          <div class="back__qrline">
+            <img src="../img/qrlne.png">
           </div>
-        </div>
-      </div>
-      <div class="main__fio">
-        <div class="main__name--title">
-          <p>Перекупко <br> Артем <br> Юрійович</p>
-        </div>
-        <div class="main__name--circle">
-          <span></span>
+          <div @ class="back__text">
+            <p>{{ randomNumber }}</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="main__updated">
       <div class="main__updated--date">
-        <p>Дані оновлені {{ new Date().toLocaleDateString() }} о {{ new Date().getHours() }}:{{new Date().getMinutes() }}</p>
+        <p>Дані оновлені {{ new Date().toLocaleDateString() }} о {{ new Date().getHours() }}:{{
+            new Date().getMinutes()
+          }}</p>
       </div>
       <div class="main__updated--circle">
         <span></span>
@@ -46,11 +66,76 @@
 
 <script>
 export default {
-  name: "Main"
+  name: "Main",
+  data() {
+    return {
+      isCardFlipped: false,
+    }
+  },
+  computed: {
+    randomNumber() {
+      return Math.floor(Math.random() * (999999999999 - 4545454545454) + 4545454545454)
+    }
+  }
 }
 </script>
 
 <style scoped>
+
+.front,
+.back {
+  transition: .35s;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: perspective(2000px) rotateY(-180deg) rotateX(0deg) rotate(0deg);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -435px;
+  justify-content: center;
+}
+
+.back__title {
+  text-transform: uppercase;
+  color: #6b767f;
+  font-family: eLight;
+  font-size: 14px;
+  padding-bottom: 24px;
+  align-self: flex-start;
+}
+
+.back__qr {
+  padding-bottom: 20px;
+}
+
+.back__qr img,
+.back__qrline img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.back__text {
+  text-align: center;
+  font-family: eRegular;
+  letter-spacing: 7.2px;
+  font-size: 16px;
+}
+
+.back__qrline {
+  padding-bottom: 5px;
+}
+
+.-front {
+  transform: perspective(2000px) rotateY(180deg) rotateX(0deg) rotateZ(0deg);
+}
+
+.-back {
+  transform: perspective(2000px) rotateY(0) rotateX(0deg) rotateZ(0deg);
+}
+
 .block {
   width: 100%;
   border-radius: 6px;
