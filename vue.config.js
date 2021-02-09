@@ -1,3 +1,3 @@
-//module.exports = {
-//     publicPath: '/doit_chance2/'
-// }
+module.exports = {
+    publicPath: '/doit_chance2/'
+}

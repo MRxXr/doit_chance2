@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <div @click="isCardFlipped = true" class="block">
+    <div @click="isCardFlipped = !isCardFlipped" class="block">
       <div :class="isCardFlipped ? '-front' : ''" class="front">
         <div class="main__title">
           <h1>Паспорт громадянина <br> України</h1>
